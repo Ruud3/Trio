@@ -214,6 +214,10 @@ jobs:
           # Several patches may be added per submodule.
           # Adding comments (#) is strongly recommended to easily tell the individual patches apart.
 
+      # Keep-alive-Pod
+      git update-index --cacheinfo 160000 dade6ed309eb72232a187d88179a367e34f800d9 "OmniBLE"
+      git submodule update
+      
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
         run: |
@@ -264,6 +268,3 @@ jobs:
           path: |
             artifacts
             buildlog
-# Keep-alive-Pod
-git update-index --cacheinfo 160000 dade6ed309eb72232a187d88179a367e34f800d9 "OmniBLE"
-git submodule update
